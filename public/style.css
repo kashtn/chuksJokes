@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(bgi.jpg);
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.joke{
+    color: rgb(22, 24, 34);
+}
+.card{
+    background-color: antiquewhite;
+    border-radius: 30%;
+}
+p{
+    font-size: 20px;
+}
