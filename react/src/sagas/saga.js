@@ -7,8 +7,8 @@ export function* watcher() {
 }
 
 export function* worker() {
-  const joke = yield call(() => {
-    return fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
+  const joke = yield call(async () => {
+    const response = await fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
@@ -16,8 +16,7 @@ export function* worker() {
         "accept": "application/json"
       }
     })
-      .then(response => response.json())
+    return await response.json()
   })
-  console.log('Saga in da House!!');
   yield put(setJoke(joke.value))
 }

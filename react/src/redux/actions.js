@@ -7,12 +7,10 @@ export function startGetting() {
 }
 
 export function setJoke(joke) {
-  // setTimeout(() => {
     return {
       type: GETJOKE,
       payload: joke
     }
-  // })
 }
 
 export function getJoke() {
